@@ -5,7 +5,7 @@ Esse projeto simula um ambiente Linux comprometido, onde um usuário malicioso �
 
 ---
 
-## 🧰 Cenário Simulado
+## Cenário Simulado
 
 - Um novo usuário chamado `atacante` é criado com shell bash.
 - O usuário tenta utilizar `su` e `sudo`, sem sucesso.
@@ -14,13 +14,13 @@ Esse projeto simula um ambiente Linux comprometido, onde um usuário malicioso �
 
 ---
 
-## ⚖️ Ferramentas e Comandos Usados
+## Ferramentas e Comandos Usados
 
-### 📊 Análise de Logs:
+### Análise de Logs:
 - `/var/log/auth.log`
 - `journalctl -xe`
 
-### ⚙️ Comandos Utilizados:
+### ⚙omandos Utilizados:
 ```bash
 # Verificação de logs de login e sudo
 sudo cat /var/log/auth.log | grep atacante
@@ -43,7 +43,7 @@ sudo date -s "2022-01-01 01:01:01"
 
 ---
 
-## 🔎 Resultados da Investigação
+## Resultados da Investigação
 
 - O usuário `atacante` foi criado manualmente:
   - Logs mostram `groupadd`, `useradd` e `passwd` para esse usuário.
@@ -54,29 +54,29 @@ sudo date -s "2022-01-01 01:01:01"
 
 ---
 
-## 📈 Habilidades Demonstradas
+## Habilidades Demonstradas
 
-- ✅ Leitura e interpretação de logs do Linux
-- ✅ Investigação de criação de usuários suspeitos
-- ✅ Detecção de backdoors simples
-- ✅ Manipulação e correlação de eventos em `/var/log` e `journalctl`
-- ✅ Conhecimento básico de técnicas de ofuscação (data/hora)
+- Leitura e interpretação de logs do Linux
+- Investigação de criação de usuários suspeitos
+- Detecção de backdoors simples
+- Manipulação e correlação de eventos em `/var/log` e `journalctl`
+- Conhecimento básico de técnicas de ofuscação (data/hora)
 
 ---
 
-## 🔗 Links Importantes
+## Links Importantes
 
 - [Documentação do journalctl](https://man7.org/linux/man-pages/man1/journalctl.1.html)
 - [Permissões de usuários e sudo no Linux](https://wiki.debian.org/sudo)
 
 ---
 
-## 🚀 Próximos Passos
+## Próximos Passos
 - Automatizar a coleta de logs suspeitos com scripts em Bash
 - Simular uma invasão via SSH com `fail2ban`
 - Criar dashboards com Wazuh para detectar cenários similares (futuramente)
 
 ---
 
-> ✨ Projeto criado como parte da trilha de estudos para vagas SOC/NOC com foco em Blue Team. 
+> Projeto criado como parte da trilha de estudos para vagas SOC/NOC com foco em Blue Team. 
 > Investigador: Felipe (@PhantomHat)
